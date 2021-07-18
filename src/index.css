@@ -1,0 +1,1012 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    position: relative;
+    background-color: rgb(67, 158, 185);
+}
+
+.homepage{
+    position: relative;
+    width: 100%;
+    height: 92.4vh;
+}
+
+.amigos-h1{
+    font-family: 'Caveat', cursive;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%);
+    font-size: 21rem;
+}
+
+.chat-njoy{
+    position: absolute;
+    top: 66%;
+    font-size: 8rem;
+    text-align: center;
+    transform: translateY(-50%);
+    font-family: 'Caveat', cursive;
+    width: 100%;
+
+}
+
+@media screen and (max-width:600px) {
+    .amigos-h1{
+        font-size: 16rem;
+    }
+    .chat-njoy{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width:406px) {
+    .amigos-h1{
+        font-size: 12rem;
+    }
+    .chat-njoy{
+        font-size: 5.1rem;
+    }
+}
+
+/* navbar */
+.nav{
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 7.6vh;
+    /* background-color: rgb(221, 221, 221); */
+    background-color: rgb(29, 29, 29);
+}
+
+.dash-element{
+    position: relative;
+    top: 27%;
+    font-size: 2.7rem;
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline-block;
+    border-right: 0.1rem solid rgb(212, 212, 212);
+}
+
+.dashboard-nav{
+    width: 70%;
+    text-align: center;
+}
+
+.sign-up-nav, .sign-in-nav{
+    width: 9%;
+    text-align: center;
+}
+
+.sign-in-nav:hover, .sign-up-nav:hover{
+    /* background-color: rgb(229, 229, 229); */
+    background-color: rgb(6, 6, 6);
+    color: white;
+}
+
+@media screen and (max-height: 600px) {
+    .dash-element{
+        top: 14%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .dash-element{
+        top: 6%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .sign-up-nav, .sign-in-nav{
+        width: 12%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sign-up-nav, .sign-in-nav{
+        width: 14%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .dashboard-nav{
+        width: 60%;
+    }
+    .sign-up-nav, .sign-in-nav{
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dash-element{
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .dash-element{
+        font-size: 2.1rem;
+    }
+}
+
+/* sign-in page */
+.sign-in-main-box{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/bg8.jpg);
+    background-size: 100% 100%;
+}
+
+.main-box{
+    font-family: 'Montserrat', sans-serif;
+    border: 0.36rem solid black;
+    border-radius: 0.6rem;
+    width: 66rem;
+    height: 29rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+    /* background-image: linear-gradient(105deg, rgb(65, 105, 225) 0%, rgb(65, 105, 225) 50%, lightgrey 50%); */
+    background-image: linear-gradient(105deg, rgb(72, 112, 235) 0%, rgb(72, 112, 235) 50%, lightgrey 50%);
+}
+
+.sign-in-box{
+    position: relative;
+    height: 29rem;
+    width: 50%;
+    float: right;
+}
+
+.sign-heading{
+    position: absolute;
+    top: 36%;
+    left: 12%;
+    transform: translateX(-16%) translateY(-30%);
+    font-size: 2.7rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.sign-heading::selection{
+    background-color: transparent;
+}
+
+.sign-in-form{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.sign-in{
+    font-size: 2.9rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sign-in::selection{
+    background-color: transparent;
+}
+
+.signin-input{
+    width: 27rem;
+    height: 3.6rem;
+    padding-left: 0.6rem;
+    font-size: 1.6rem;
+}
+
+.password{
+    margin-top: 0.3rem;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1.6rem;
+    color: rgb(0.6, 0.6, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signin-label{
+    font-size: 1.6rem;
+    position: relative;
+    left: 2.9%;
+    top: -1px;
+    color: rgb(0.6, 0.6, 0.6);
+    transition:  all 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signin-label::selection{
+    background-color: transparent;
+}
+
+input:placeholder-shown + label{
+    opacity: 0;
+    visibility: hidden;
+}
+
+input:focus{
+    outline: none;
+}
+
+.sign-up-box{
+    height: 29rem;
+    width: 50%;
+    float: left;
+}
+
+.signin-input, .signin-label{
+    display: block;
+}
+
+.sign-in-button{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%);
+    width: 12rem;
+    height: 3.6rem;
+    color: white;
+    background-color: rgb(57, 100, 230);
+    outline: 0.1rem solid white;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+.sign-in-button::selection{
+    background-color: transparent;
+}
+
+.sign-in-button:hover{
+    background-color: rgb(41, 76, 179);
+}
+
+.signin-signup{
+    position: absolute;
+    font-size: 1.8rem;
+    text-align: center;
+    top: 75%;
+    left: 26.3%;
+    font-weight: 600;
+    transform: translateX(-60%) translateY(-60%);
+    color: black;
+    text-decoration: none;
+    width: 12rem;
+    height: 3.6rem;
+    border-radius: 0.6rem;
+    background-color: rgb(229, 229, 229);
+    outline: 0.1rem solid black;
+}
+
+.signin-signup:hover{
+    background-color: rgb(206, 206, 206);
+    color: rgb(29, 29, 29);
+}
+
+.signin-signup::selection{
+    background-color: transparent;
+}
+
+.signup-span{
+    position: relative;
+    top: 21%;
+    transform: translateY(-60%);
+}
+
+@media screen and (max-width:700px) {
+    .main-box{
+        width: 56rem;
+    }
+    .signin-input{
+        width: 21rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .main-box{
+        width: 50rem;
+    }
+    
+    .sign-heading{
+        font-size: 2.1rem;
+    }
+
+    .signin-signup{
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-box{
+        height: 58rem;
+        width: 36rem;
+        background-image: linear-gradient(0deg, rgb(72, 112, 235) 0%, rgb(72, 112, 235) 50%, lightgrey 50%);
+    }
+    .sign-up-box, .sign-in-box{
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .sign-heading{
+        position: absolute;
+        top: 27%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%) translateY(-36%);
+        font-size: 2.9rem;
+    }
+
+    .signin-signup{
+        top: 66%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-60%);
+    }
+    
+    .signin-input{
+        width: 29rem;
+        height: 4rem;
+    }
+
+    .signin-label{
+        left: 2.7%;
+    }
+    
+    @media screen and (max-height:700px) {
+        .main-box{
+            height: 50rem;
+        }
+    
+        .sign-in-box, .sign-up-box{
+            height: 25rem;
+        }
+    }
+
+    @media screen and (max-height:600px) {
+        .main-box{
+            height: 42rem;
+        }
+    
+        .sign-in-box, .sign-up-box{
+            height: 21rem;
+        }
+
+        .signin-signup{
+            top: 70%;
+        }
+    }
+}
+
+
+/* signup page */
+.sign-up-main-box{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/bg10.jpg);
+    background-size: 100% 100%;
+}
+
+.signup-field{
+    width: 40rem;
+    height: 56rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 0.36rem solid black;
+    background-color: rgb(212, 212, 212);
+    padding: 4rem 1rem;
+}
+
+.surr-signup{
+    background-color: rgb(212, 212, 212);
+}
+
+.sign-up-form{
+    position: relative;
+}
+
+.sign-up-legend{
+    font-size: 2.9rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.signup-input-name{
+    display: inline-block;
+    width: 18.4rem;
+    height: 3.6rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid black;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
+    padding-left: 0.6rem;
+}
+
+.signup-input{
+    width: 38rem;
+    height: 3.6rem;
+    margin-top: 0.6rem;
+    display: block;
+    border: 0.1rem solid black;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
+    padding-left: 0.6rem;
+}
+
+.fname{
+    margin-right: 1.2rem;
+}
+
+.label-fname{
+    position: absolute;
+    top: 10%;
+    left: 1.75%;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.label-lname{
+    position: absolute;
+    top: 10%;
+    left: 53.3%;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup-label{
+    position: relative;
+    top: 1.4%;
+    left: 1.66%;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign-up-button{
+    position: absolute;
+    top: 106%;
+    width: 14rem;
+    height: 4rem;
+    font-size: 2.1rem;
+    border-radius: 0.6rem;
+    outline: none;
+    font-weight: 700;
+    border: 0.1rem solid black;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+.sign-up-button:hover{
+    background-color: skyblue;    
+    color: rgb(63, 63, 63);
+}
+
+@media screen and (max-width: 500px) {
+    .signup-field{
+        width: 32rem;
+    }
+
+    .signup-input-name{
+        width: 14.4rem;
+    }
+    
+    .signup-input{
+        width: 30rem;
+    }
+
+    .sign-up-button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* invali sign in page  */
+.invalid-sign-in-main-page{
+    background-color: rgb(203, 240, 255);
+    height: 100vh;
+    width: 100%;
+}
+
+.invalid-credentials{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.invalid-sign-in-heading-primary{
+    font-size: 6rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.invalid-sign-in-heading-secondary{
+    font-size: 4.5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.invalid-redirect-signin{
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+@media screen and (max-width:1000px) {
+    .invalid-sign-in-heading-primary{
+        font-size: 5.1rem;
+    }
+    
+    .invalid-sign-in-heading-secondary{
+        font-size: 3.6rem;
+    }
+    
+    .invalid-redirect-signin{
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .invalid-sign-in-heading-primary{
+        font-size: 3.9rem;
+    }
+    
+    .invalid-sign-in-heading-secondary{
+        font-size: 2.4rem;
+    }
+    
+    .invalid-redirect-signin{
+        font-size: 1.5rem;
+    }
+}
+
+/* success sign in page */
+
+.sign-in-success-main-page{
+    height: 100vh;
+    width: 100%; 
+    background-color: rgb(203, 240, 255);
+}
+
+.success-signin-credentials{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.success-sign-in-heading-primary{
+    font-size: 6rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.success-sign-in-heading-secondary{
+    font-size: 5.1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .success-sign-in-heading-primary{
+        font-size: 5.1rem;
+    }
+    
+    .success-sign-in-heading-secondary{
+        font-size: 4.4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .success-sign-in-heading-primary{
+        font-size: 4rem;
+    }
+    
+    .success-sign-in-heading-secondary{
+        font-size: 2.7rem;
+    }
+}
+
+/* account created page */
+
+.account-created-main-page{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(203, 240, 255);
+}
+
+.account-created-credentials{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.created-heading-primary{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.created-heading-secondary{
+    font-size: 5.1rem;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .created-heading-primary{
+        font-size: 4.5rem;
+    }
+    
+    .created-heading-secondary{
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .created-heading-primary{
+        font-size: 4.2rem;
+    }
+    
+    .created-heading-secondary{
+        font-size: 3.2rem;
+    }
+}
+
+/* dashboard */
+.dashboard-main-page{
+    position: relative;
+    width: 100%;
+}
+.dashboard-main-content{
+    position: relative;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 1000px;
+    min-height: 90vh;
+    /* background-color: rgb(67, 158, 185); */
+    background-color: white;
+
+}
+
+.submit-new-dash{
+    position: absolute;
+    top: 47%;
+    margin-left: 1.2rem;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.submit-new-dash:hover{
+    background-color: white;
+}
+
+.dash-username{
+    font-size: 3.6rem;
+}
+
+.dash-username::selection{
+    background-color: rgb(67, 158, 185);
+    color: whitesmoke;
+}
+
+.content-para{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    margin-top: 1.4rem;
+    font-size: 2.1rem;
+    margin-bottom: 1.2rem;
+    color: rgb(64, 64, 64);
+}
+
+.content-para::selection{
+    background-color: rgb(67, 158, 185);
+    color: whitesmoke;
+}
+
+.like{
+    position: absolute;
+    bottom: 6%;
+    font-size: 1.27rem;
+    cursor: pointer;
+}
+
+.like::selection, .dislike::selection, .like-span::selection, .dislike-span::selection{
+    background-color: transparent;
+}
+
+.dislike{
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+    font-size: 1.27rem;
+    cursor: pointer;
+}
+
+.like-span{
+    position: absolute;
+    bottom: 6%;
+    left: 7.6%;
+    font-size: 1.27rem;
+    cursor: pointer;
+}
+
+.dislike-span{
+    position: absolute;
+    bottom: 6%;
+    left: 14.6%;
+    font-size: 1.27rem;
+    cursor: pointer;
+}
+
+.cancel-edit{
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 63%;
+    margin-left: 1.2rem;
+    width: 8rem;
+    height: 3rem;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-edit:hover{
+    background-color: white;
+}
+
+.submit-edit{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dash-form{
+    position: relative;
+    left: 10%;
+    width: 800px;
+    margin: 0;
+    border: 0;
+}
+
+.something{
+    margin-top: 5.1rem;
+    margin-bottom: 2.7rem;
+    width: 700px;
+    height: 12rem;
+    background-color: rgb(229, 229, 229);
+    font-size: 1.6rem;
+    padding-left: 1.2rem;
+}
+
+.dash-post{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    border: 1px solid black;
+    padding: 2.7rem 3.6rem;
+    margin-bottom: 1.4rem;
+    background-color: whitesmoke;
+    min-height: 21rem;
+}
+
+.edit-post{
+    border-radius: 0.6rem;
+    position: absolute;
+    left: 90%;
+    height: 2.9rem;
+    cursor: pointer;
+    width: 5.6rem;
+    background-color: skyblue;
+    font-weight: 600;
+}
+
+.edit-post:hover{
+    background-color: rgb(57, 158, 197);
+}
+
+.delete-post{
+    border-radius: 0.6rem;
+    position: absolute;
+    font-weight: 600;
+    cursor: pointer;
+    left: 82%;
+    height: 2.9rem;
+    width: 5.6rem;
+    background-color: skyblue;
+}
+
+.delete-post:hover{
+    background-color: rgb(57, 158, 197);
+}
+
+@media screen and (max-width:1000px) {
+    .dashboard-main-content{
+        width: 800px;
+    }
+    .dash-post{
+        width: 640px;
+    }
+    .something{
+        width: 560px;
+    }
+
+    .dashboard-main-content{
+        margin-right: 0;
+    }
+
+    .dash-form{
+        width: 64rem;
+    }
+
+    .delete-post{
+        left: 80%;
+    }
+    
+    .dislike{
+        left: 12%;
+    }
+    
+    .like-span{
+        left: 9.6%;
+    }
+    
+    .dislike-span{
+        left: 17.8%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .dashboard-main-content{
+        width: 100%;
+    }
+    .dash-post{
+        width: 90%;
+    }
+    .something{
+        width: 85%;
+    }
+    .dash-form{
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .delete-post{
+        left: 73%;
+    }
+    .edit-post{
+        left: 86%;
+    }
+
+    .dash-form{
+        width: 86%;
+    }
+    .dislike{
+        left: 8rem;
+    }
+    
+    .like-span{
+        left: 6.4rem;
+    }
+    
+    .dislike-span{
+        left: 12rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .submit-new-dash{
+        width: 6rem;
+    }
+    .cancel-edit{
+        width: 6rem;
+    }
+    .delete-post{
+        left: 68.6%;
+    }
+    .edit-post{
+        left: 84%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .delete-post{
+        left: 64%;
+        width: 5.1rem;
+    }
+    .edit-post{
+        left: 82%;
+        width: 5.1rem;
+    }
+    .dash-post{
+        width: 96%;
+    }
+}
+
+/* confirm popups */
+
+.confirm-popup{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(0, 0, 0,0.9);
+    z-index: 6;
+}
+
+.alert-message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.alert-heading{
+    font-size: 6.6rem;
+    text-align: center;
+    color: white;
+}
+
+.alert-reason{
+    font-size: 5.1rem;
+    text-align: center;
+    margin-top: 3.6rem;
+    color: white;
+}
+
+.alert-buttons{
+    margin-top: 3rem;
+    position: relative;
+    left: 24%;
+}
+
+.yes-button{
+    height: 3.6rem;
+    width: 9.6rem;
+    margin-right: 1.2rem;
+    cursor: pointer;
+}
+
+.no-button{
+    height: 3.6rem;
+    width: 9.6rem;
+    cursor: pointer;
+}
+
+/* alert show  */
+.alert-show{
+    position: relative;
+    text-align: center;
+    top: 0.6rem;
+    font-size: 2.9rem;
+    font-weight: 600;
+    color: black;
+}
